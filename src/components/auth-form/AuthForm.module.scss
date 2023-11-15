@@ -1,8 +1,8 @@
 .input{
   width: 300px;
-  color: #FFF;
-  padding: 15px;
-  border-radius: 20px 0 0 20px;
+  color: #222;
+  padding: 23px;
+  border-radius: 45px 0 0 45px;
   outline: none;
   border: none;
   font-family: Inter;
@@ -10,15 +10,15 @@
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  background-color: red;
+  background-color: #FFF;
 }
 
 .button{
   color: #FFF;
   background: #F42E30;
-  padding: 17px;
+  padding: 25px;
   width: 100px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 45px 45px 0;
   outline: none;
   border: none;
   font-family: Inter;
@@ -27,6 +27,8 @@
   font-weight: 500;
   line-height: 100%;
   &:hover{
-    background: rgba(237, 44, 47, 0.80);
+    background: rgba(227, 44, 47);
   }
 }
+
+
