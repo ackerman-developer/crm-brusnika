@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-type Admin ={
-  password: string | null
-}
+import { Admin } from '../../types/store';
 
 const initialState: Admin = {
   password: null

@@ -16,12 +16,12 @@ export function AuthForm():JSX.Element{
     if (isAuth) {
       navigate(AppRoute.main)
       console.log('Авторизация успешна!')
-    } else {
+    } else if (password !== "" && !isAuth) {
       console.log('Неверный пароль')
     }
-  })
+  }, [isAuth, navigate, password])
 
-  const handleAuth = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleAuth = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     dispatch(setAdmin(password))
   }
