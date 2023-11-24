@@ -1,0 +1,26 @@
+.component {
+  background-color: #212121;
+  height: 100vh;
+  padding: 20px;
+  color: #fff;
+  transition: width 0.3s ease;
+  width: 100px;
+  overflow: hidden;
+
+  &.open {
+    width: 250px;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  &.open {
+    flex-direction: unset;
+  }
+  .logo{
+    visibility: hidden;
+  }
+}
