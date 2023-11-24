@@ -6,7 +6,6 @@
   transition: width 0.3s ease;
   width: 100px;
   overflow: hidden;
-
   &.open {
     width: 250px;
   }
@@ -20,7 +19,27 @@
   &.open {
     flex-direction: unset;
   }
-  .logo{
-    visibility: hidden;
+}
+
+.logoText h1{
+  white-space: nowrap;
+}
+
+.btn{
+  position: absolute;
+  left: 85px;
+  top: 26px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  border-color: #212121;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease, left 0.3s ease;
+  &.open {
+    left: 235px;
   }
 }

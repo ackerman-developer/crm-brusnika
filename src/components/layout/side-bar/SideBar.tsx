@@ -14,14 +14,14 @@ export default function SideBar(): JSX.Element {
   return (
     <div className={`${styles.component} ${isOpen ? styles.open : ''}`}>
       <div className={`${styles.title} ${isOpen ? styles.open : ''}`}>
-      <div className={styles.logoText}>
+        <div className={styles.logoText}>
           {!isOpen ? (
             <img src={logo} alt='Logo' />
           ) : (
             <h1>Side Bar</h1>
           )}
         </div>
-        <div className={styles.btn} onClick={toggleSidebar}>
+        <div className={`${styles.btn} ${isOpen ? styles.open : ''}`} onClick={toggleSidebar}>
           {!isOpen ? (
             <img src={btn_right} alt='' />
           ) : (
