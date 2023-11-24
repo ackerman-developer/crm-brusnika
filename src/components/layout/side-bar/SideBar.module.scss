@@ -2,6 +2,10 @@
   background-color: #212121;
   height: 100vh;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   color: #fff;
   transition: width 0.3s ease;
   width: 100px;
@@ -21,25 +25,45 @@
   }
 }
 
-.logoText h1{
-  white-space: nowrap;
+.logoText{
+  h1{
+    white-space: nowrap;
+  }
+  img{
+    width: 45px;
+  }
 }
 
 .btn{
   position: absolute;
-  left: 85px;
-  top: 26px;
+  left: 82px;
+  top: 25px;
   height: 35px;
   width: 35px;
-  border-radius: 50%;
-  background-color: #fff;
-  border-color: #212121;
-  border-style: solid;
+  border-radius: 5px;
+  background-color: #212121;
+  border-color: #fff;
+  border: 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: width 0.3s ease, left 0.3s ease;
+  cursor: pointer;
   &.open {
-    left: 235px;
+    left: 232px;
+  }
+}
+
+.content{
+  img{
+    width: 45px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
   }
 }
