@@ -1,3 +1,4 @@
+import CreateDealForm from '../../components/create-deal-form/CreateDealForm'
 import SideBar from '../../components/layout/side-bar/SideBar'
 import styles from './MainScreen.module.scss'
 
@@ -7,6 +8,7 @@ export default function MainScreen():JSX.Element{
       <SideBar/>
       <div className={styles.content}>
         <h1>Главная страница</h1>
+        <CreateDealForm/>
       </div>
     </div>
   )

@@ -21,8 +21,8 @@ export default function AuthForm():JSX.Element{
     }
   }, [isAuth, navigate, password])
 
-  const handleAuth = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+  const handleAuth = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     dispatch(setAdmin(password))
   }
 
