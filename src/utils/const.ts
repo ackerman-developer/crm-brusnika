@@ -1,4 +1,5 @@
 export enum AppRoute{
   auth = '/',
-  main = '/main'
+  main = '/main',
+  createDeal = '/createDeal'
 }

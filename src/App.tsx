@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Authorization } from "./pages/sing-in/Authorization";
+import Authorization from "./pages/sing-in/Authorization";
 import { AppRoute } from "./utils/const";
-import { MainScreen } from "./pages/main-screen/MainScreen";
+import MainScreen from "./pages/main-screen/MainScreen";
+import CreateDeal from "./pages/create-deal/CreateDeal";
 
 export default function App() {
   return (
@@ -15,6 +16,10 @@ export default function App() {
           <Route
             path = {AppRoute.main}
             element = {<MainScreen/>}
+          />
+          <Route
+            path = {AppRoute.createDeal}
+            element = {<CreateDeal/>}
           />
         </Routes>
       </BrowserRouter>

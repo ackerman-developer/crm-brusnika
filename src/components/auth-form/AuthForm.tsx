@@ -3,10 +3,10 @@ import { useAuth } from '../../hooks/use-auth'
 import styles from './AuthForm.module.scss'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { setAdmin } from '../../store/adminSlice/adminSlice'
+import { setAdmin } from '../../store/slice/adminSlice'
 import { AppRoute } from '../../utils/const'
 
-export function AuthForm():JSX.Element{
+export default function AuthForm():JSX.Element{
   const [password, setPassword] = useState<string>("")
   const {isAuth} = useAuth()
   const dispatch = useAppDispatch()
