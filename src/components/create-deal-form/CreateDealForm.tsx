@@ -26,12 +26,16 @@ export default function CreateDealForm():JSX.Element{
 
   return(
     <form className={styles.component} onSubmit={handleSubmit}>
+      <div className={styles.title}>
+        <h1>Создать объект</h1>
+      </div>
       <div className={styles.inputData}>
         <label>
           Регистрационный номер:
           <input
             type="text"
             name="registerNumber"
+            placeholder='189093750'
             value={formData.registerNumber || ''}
             onChange={handleChange}
           />
@@ -43,6 +47,7 @@ export default function CreateDealForm():JSX.Element{
           <input
             type="text"
             name="address"
+            placeholder='Мира, 32'
             value={formData.address}
             onChange={handleChange}
           />
@@ -54,6 +59,7 @@ export default function CreateDealForm():JSX.Element{
           <input
             type="text"
             name="square"
+            placeholder='100 кв. м.'
             value={formData.square}
             onChange={handleChange}
           />
@@ -65,6 +71,7 @@ export default function CreateDealForm():JSX.Element{
           <input
             type="text"
             name="aboutHolder"
+            placeholder='ООО Название компании'
             value={formData.aboutHolder}
             onChange={handleChange}
           />
@@ -76,6 +83,7 @@ export default function CreateDealForm():JSX.Element{
           <input
             type="text"
             name="price"
+            placeholder='1 500 000 р'
             value={formData.price || ''}
             onChange={handleChange}
           />
@@ -87,6 +95,7 @@ export default function CreateDealForm():JSX.Element{
           <input
             type="text"
             name="searchObject"
+            placeholder='Менеджер'
             value={formData.searchObject}
             onChange={handleChange}
           />
