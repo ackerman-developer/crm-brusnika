@@ -1,12 +1,12 @@
 .component {
-  background-color: #212121;
+  position: fixed;
   height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  color: #fff;
+  color: black;
   transition: width 0.3s ease;
   width: 100px;
   overflow: hidden;
@@ -34,26 +34,6 @@
   }
 }
 
-.btn{
-  position: absolute;
-  left: 82px;
-  top: 25px;
-  height: 35px;
-  width: 35px;
-  border-radius: 5px;
-  background-color: #212121;
-  border-color: #fff;
-  border: 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: width 0.3s ease, left 0.3s ease;
-  cursor: pointer;
-  &.open {
-    left: 232px;
-  }
-}
-
 .content{
   img{
     width: 45px;
@@ -62,7 +42,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 500;
   }

@@ -1,19 +1,11 @@
-import { useState } from 'react';
 import styles from './SideBar.module.scss';
-import btn_right from '../../../assets/sider-ui.svg';
-import btn_left from '../../../assets/sider-left.svg'
-import logo from '../../../assets/logo.svg'
-import btn_home from '../../../assets/home.svg'
+import logo from '../../assets/logo.svg'
+import btn_home from '../../assets/home.svg'
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../../../utils/const';
+import { AppRoute } from '../../utils/const';
+import { SideBarProps } from '../../types/types';
 
-export default function SideBar(): JSX.Element {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-  }
-
+export default function SideBar({ isOpen }: SideBarProps): JSX.Element{
   return (
     <div className={`${styles.component} ${isOpen ? styles.open : ''}`}>
       <div className={`${styles.title} ${isOpen ? styles.open : ''}`}>
@@ -22,13 +14,6 @@ export default function SideBar(): JSX.Element {
             <img src={logo} alt='Logo' />
           ) : (
             <h1>Side Bar</h1>
-          )}
-        </div>
-        <div className={`${styles.btn} ${isOpen ? styles.open : ''}`} onClick={toggleSidebar}>
-          {!isOpen ? (
-            <img src={btn_right} alt='' />
-          ) : (
-            <img src={btn_left} alt='' />
           )}
         </div>
       </div>

@@ -6,3 +6,8 @@ export interface LandFormData{
   price: number | null,
   searchObject: string
 }
+
+export interface SideBarProps{
+  isOpen: boolean
+  toggleSidebar: () => void
+}
