@@ -1,6 +1,7 @@
 import { SideBarProps } from '../../types/types'
 import styles from './Header.module.scss'
 import menuBtn from '../../assets/menu.svg'
+import InputSearch from '../inputSearch/InputSearch'
 
 export default function Header({ isOpen, toggleSidebar }: SideBarProps):JSX.Element{
   return(
@@ -8,6 +9,7 @@ export default function Header({ isOpen, toggleSidebar }: SideBarProps):JSX.Elem
       <div className={styles.btn} onClick={toggleSidebar}>
         <img src={menuBtn} alt=''/>
       </div>
+      <InputSearch/>
     </div>
   )
 }

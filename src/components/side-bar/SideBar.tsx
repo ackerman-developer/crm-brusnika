@@ -1,6 +1,8 @@
 import styles from './SideBar.module.scss';
 import logo from '../../assets/logo.svg'
-import btn_home from '../../assets/home.svg'
+import btnHome from '../../assets/home.svg'
+import btnDeal from '../../assets/deal.svg'
+import iconLogo from '../../assets/icon-logo.svg'
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../utils/const';
 import { SideBarProps } from '../../types/types';
@@ -11,17 +13,27 @@ export default function SideBar({ isOpen }: SideBarProps): JSX.Element{
       <div className={`${styles.title} ${isOpen ? styles.open : ''}`}>
         <div className={styles.logoText}>
           {!isOpen ? (
-            <img src={logo} alt='Logo' />
+            <div className={styles.logo}>
+              <img src={logo} alt='Logo' />
+            </div>
           ) : (
-            <h1>Side Bar</h1>
+            <div className={styles.iconlogo}>
+              <img src={iconLogo} alt='Logo' />
+            </div>
           )}
         </div>
       </div>
       <div className={`${styles.content} ${isOpen ? styles.expanded : ''}`}>
         {!isOpen ? (
-            <Link to={AppRoute.main}><img src={btn_home} alt=''/></Link>
-          ) : (
-            <Link to={AppRoute.main}><img src={btn_home} alt=''/> Главная</Link>
+          <>
+            <Link to={AppRoute.main}><img src={btnHome} alt=''/></Link>
+            <Link to={AppRoute.createDeal}><img src={btnDeal} alt=''/></Link>
+          </>
+        ) : (
+          <>
+            <Link to={AppRoute.main}><img src={btnHome} alt=''/>Главная</Link>
+            <Link to={AppRoute.createDeal}><img src={btnDeal} alt=''/>Создать объект</Link>
+          </>
         )}
       </div>
     </div>

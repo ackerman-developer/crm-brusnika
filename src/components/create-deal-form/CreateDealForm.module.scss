@@ -1,20 +1,29 @@
 .component{
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 20vw;
   button{
+    margin: 0 20vw;
     height: 48px;
-    background: #212121;
+    background: #F42E30;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.11);
-    border-radius: 16px;
+    border-radius: 20px;
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
     text-align: center;
     color: #FFFFFF;
     border: none;
+    &:hover{
+      background: rgba(227, 44, 47);
+    }
   }
 }
 
 .title{
+  display: flex;
+  justify-content: center;
   h1{
     font-size: 25px;
   }
@@ -23,8 +32,8 @@
 .inputData{
   label{
     display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
   }
   input{
     height: 48px;

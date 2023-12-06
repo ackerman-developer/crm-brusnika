@@ -26,15 +26,25 @@
 }
 
 .logoText{
-  h1{
-    white-space: nowrap;
+  .logo{
+    img{
+      width: 40px;
+    }
   }
-  img{
-    width: 45px;
+  .iconlogo{
+    img{
+      transition: width 0.001s ease;
+      width: 220px;
+    }
   }
 }
 
 .content{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 20px;
+  transition: width 0.3s ease;
   img{
     width: 45px;
   }
