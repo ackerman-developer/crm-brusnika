@@ -13,7 +13,7 @@ export const createLand = createAsyncThunk<
   return data
 })
 
-// console.log(createLand)
+console.log(createLand)
 
 export const fetchLands = createAsyncThunk<
   LandFormData,

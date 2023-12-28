@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Admin } from '../../types/store';
+import { Namespace } from '../../utils/const';
 
 const initialState: Admin = {
   password: null
 }
 
-const adminSlice = createSlice({
-  name: 'admin',
+export const UserData = createSlice({
+  name: Namespace.User,
   initialState,
   reducers: {
     setAdmin(state, action: PayloadAction<string>) {
@@ -18,7 +19,6 @@ const adminSlice = createSlice({
   }
 })
 
-export const {setAdmin, removeAdmin} = adminSlice.actions
+export const {setAdmin, removeAdmin} = UserData.actions
 
-export default adminSlice.reducer
 

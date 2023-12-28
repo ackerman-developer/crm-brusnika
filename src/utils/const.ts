@@ -17,5 +17,6 @@ export const ApiRoute = {
 }
 
 export const Namespace = {
-  Lands: 'lands'
+  Lands: 'lands',
+  User: 'user'
 }
