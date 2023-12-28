@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import adminReducer from './slice/adminSlice';
+import { rootReducer } from './rootReducer';
+import apiConfig from '../api/apiConfig';
+
+const api = apiConfig
 
 const store = configureStore({
-  reducer: {
-    admin: adminReducer,
-  }
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ thunk: { extraArgument: api } })
 })
 
 export default store

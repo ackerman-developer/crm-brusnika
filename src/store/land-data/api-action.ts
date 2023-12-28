@@ -12,6 +12,6 @@ export const createLand = createAsyncThunk<
   const { data } = await api.post<LandFormData>(
     `${ApiRoute.Land}`,
     LandFormData
-  );
-  return data;
+  )
+  return data
 })

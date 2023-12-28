@@ -1,15 +1,15 @@
 import axios, { AxiosInstance } from "axios";
 
-interface ApiConfig {
+interface Api {
   withCredentials: boolean;
   baseURL?: string;
 }
 
-const apiConfig: ApiConfig = {
+const api: Api = {
   withCredentials: true,
   baseURL: process.env.SERVER_API_URL,
 };
 
-const api: AxiosInstance = axios.create(apiConfig);
+const apiConfig: AxiosInstance = axios.create(api);
 
-export default api
+export default apiConfig

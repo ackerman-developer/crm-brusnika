@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import styles from './CreateDealForm.module.scss'
 import { LandFormData } from '../../types/types'
+import { createLand } from '../../store/land-data/api-action'
+import { useAppDispatch } from '../../hooks/redux-hooks'
 
 export default function CreateDealForm():JSX.Element{
+  const dispatch = useAppDispatch()
   const [formData, setFormData] = useState<LandFormData>({
     registerNumber: null,
     address: '',
@@ -22,6 +25,15 @@ export default function CreateDealForm():JSX.Element{
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    dispatch(createLand(formData))
+    setFormData({
+      registerNumber: null,
+      address: '',
+      square: '',
+      aboutHolder: '',
+      price: null,
+      searchObject: ''
+    });
   }
 
   return(
