@@ -6,9 +6,9 @@ export type LandForm = {
   formData:{
     registerNumber: number | null,
     address: string,
-    square: string,
+    areaInMeters: string,
     aboutHolder: string,
-    price: number | null,
-    searchObject: string
+    price: string,
+    whoIsFound: string
   }
 }

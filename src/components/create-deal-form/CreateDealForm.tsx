@@ -9,10 +9,10 @@ export default function CreateDealForm():JSX.Element{
   const [formData, setFormData] = useState<LandFormData>({
     registerNumber: null,
     address: '',
-    square: '',
+    areaInMeters: '',
     aboutHolder: '',
-    price: null,
-    searchObject: ''
+    price: '',
+    whoIsFound: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,10 +29,10 @@ export default function CreateDealForm():JSX.Element{
     setFormData({
       registerNumber: null,
       address: '',
-      square: '',
+      areaInMeters: '',
       aboutHolder: '',
-      price: null,
-      searchObject: ''
+      price: '',
+      whoIsFound: ''
     });
   }
 
@@ -72,7 +72,7 @@ export default function CreateDealForm():JSX.Element{
             type="text"
             name="square"
             placeholder='100 кв. м.'
-            value={formData.square}
+            value={formData.areaInMeters}
             onChange={handleChange}
           />
         </label>
@@ -108,7 +108,7 @@ export default function CreateDealForm():JSX.Element{
             type="text"
             name="searchObject"
             placeholder='Менеджер'
-            value={formData.searchObject}
+            value={formData.whoIsFound}
             onChange={handleChange}
           />
         </label>
