@@ -5,9 +5,11 @@ interface Api {
   baseURL?: string;
 }
 
+const BACKEND_URL = '/api'
+
 const api: Api = {
   withCredentials: true,
-  baseURL: process.env.SERVER_API_URL,
+  baseURL: BACKEND_URL,
 };
 
 const apiConfig: AxiosInstance = axios.create(api);
