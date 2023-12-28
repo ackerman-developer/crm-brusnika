@@ -3,7 +3,7 @@ import adminReducer from './slice/adminSlice';
 
 const store = configureStore({
   reducer: {
-    admin: adminReducer
+    admin: adminReducer,
   }
 })
 

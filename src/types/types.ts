@@ -11,3 +11,5 @@ export interface SideBarProps{
   isOpen: boolean
   toggleSidebar: () => void
 }
+
+

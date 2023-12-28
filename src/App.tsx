@@ -4,6 +4,9 @@ import { AppRoute } from "./utils/const";
 import MainScreen from "./pages/main-screen/MainScreen";
 import CreateDeal from "./pages/create-deal/CreateDeal";
 import Layout from "./components/layout/Layout";
+import ArchiveLand from "./pages/archive-land/ArchiveLand";
+import LkManager from "./pages/lk-manager/LkManager";
+
 
 export default function App() {
   return (
@@ -14,7 +17,8 @@ export default function App() {
             path = {AppRoute.auth}
             element = {<Authorization/>}
           />
-          <Route path={AppRoute.auth} element={<Layout/>}>
+          <Route path={AppRoute.main} element={<Layout/>}
+          >
             <Route
               path = {AppRoute.main}
               element = {<MainScreen/>}
@@ -22,6 +26,14 @@ export default function App() {
             <Route
               path = {AppRoute.createDeal}
               element = {<CreateDeal/>}
+            />
+            <Route
+              path= {AppRoute.archiveLand}
+              element = {<ArchiveLand/>}
+            />
+            <Route
+              path= {AppRoute.lkManager}
+              element = {<LkManager/>}
             />
           </Route>
         </Routes>
