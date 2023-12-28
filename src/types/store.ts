@@ -8,7 +8,7 @@ export type LandForm = {
     address: string,
     areaInMeters: string,
     aboutHolder: string,
-    price: string,
+    price: number | null,
     whoIsFound: string
   }
 }

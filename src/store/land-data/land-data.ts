@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { LandFormData } from "../../types/types";
 import { createLand } from "./api-action";
 import { Namespace } from "../../utils/const";
@@ -18,11 +18,9 @@ export const landData = createSlice({
   initialState,
   reducers: {
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(createLand.fulfilled, (state, action) => {
-        state.loading = false;
-        state.lands.push(action.payload);
-      })
+  extraReducers:{
+    [createLand.fulfilled.type]: (state, action: PayloadAction<LandFormData>) => {
+      state.lands.push(action.payload)
+    },
   }
 })

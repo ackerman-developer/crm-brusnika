@@ -11,7 +11,7 @@ export default function CreateDealForm():JSX.Element{
     address: '',
     areaInMeters: '',
     aboutHolder: '',
-    price: '',
+    price: null,
     whoIsFound: ''
   })
 
@@ -31,7 +31,7 @@ export default function CreateDealForm():JSX.Element{
       address: '',
       areaInMeters: '',
       aboutHolder: '',
-      price: '',
+      price: null,
       whoIsFound: ''
     });
   }
@@ -70,7 +70,7 @@ export default function CreateDealForm():JSX.Element{
           Площадь объекта:
           <input
             type="text"
-            name="square"
+            name="areaInMeters"
             placeholder='100 кв. м.'
             value={formData.areaInMeters}
             onChange={handleChange}
@@ -106,7 +106,7 @@ export default function CreateDealForm():JSX.Element{
           Канал поиска:
           <input
             type="text"
-            name="searchObject"
+            name="whoIsFound"
             placeholder='Менеджер'
             value={formData.whoIsFound}
             onChange={handleChange}
