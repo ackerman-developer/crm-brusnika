@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { createLand } from './api-action';
+import { createSlice } from '@reduxjs/toolkit';
+import { createLand, fetchLands } from './api-action';
 
 interface LandFormData {
   registerNumber: number | null,
@@ -13,6 +13,7 @@ interface LandFormData {
 interface LandState {
   lands: LandFormData[]
   formData: LandFormData
+  isFetchingLandsData: boolean,
 }
 
 const initialState: LandState = {
@@ -24,23 +25,30 @@ const initialState: LandState = {
     aboutHolder: '',
     price: null,
     searchObject: ''
-  }
+  },
+  isFetchingLandsData: false,
 }
 
 export const landSlice = createSlice({
   name: 'land',
   initialState,
-  reducers: {
-    addLand: (state, action: PayloadAction<LandFormData>) => {
-      state.lands.push(action.payload);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(createLand.fulfilled, (state, action: PayloadAction<LandFormData>) => {
-      state.lands.push(action.payload);
-    })
+    // builder.addCase(createLand.fulfilled, (state, action: PayloadAction<LandFormData>) => {
+    //   state.lands.push(action.payload);
+    // })
+    builder
+      .addCase(fetchLands.pending, (state) => {
+        state.isFetchingLandsData = true
+      })
+      .addCase(fetchLands.fulfilled, (state, action) => {
+        state.lands = [...state.lands, action.payload]
+        state.isFetchingLandsData = false
+      })
+      .addCase(createLand.fulfilled, (state, action) => {
+        state.lands.push(action.payload)
+      })
   }
 })
 
-export const { addLand } = landSlice.actions
 export default landSlice.reducer

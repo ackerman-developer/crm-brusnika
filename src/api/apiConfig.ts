@@ -1,17 +1,13 @@
-import axios, { AxiosInstance } from "axios";
-
-interface Api {
-  withCredentials: boolean;
-  baseURL?: string;
-}
+import axios, {AxiosInstance} from 'axios';
 
 const BACKEND_URL = '/api'
+const REQUEST_TIMEOUT = 5000
 
-const api: Api = {
-  withCredentials: true,
-  baseURL: BACKEND_URL,
-};
+export const createApi = (): AxiosInstance => {
+  const api = axios.create({
+    baseURL: BACKEND_URL,
+    timeout: REQUEST_TIMEOUT,
+  })
 
-const apiConfig: AxiosInstance = axios.create(api);
-
-export default apiConfig
+  return api
+}
