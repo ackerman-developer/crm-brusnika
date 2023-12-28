@@ -13,5 +13,9 @@ export enum AuthStatus{
 }
 
 export const ApiRoute = {
-  Land: '/lands',
-};
+  Lands: '/lands',
+}
+
+export const Namespace = {
+  Lands: 'lands'
+}

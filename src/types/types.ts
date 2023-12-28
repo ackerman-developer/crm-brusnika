@@ -1,4 +1,4 @@
-export interface LandFormData{
+export type LandFormData = {
   registerNumber: number | null,
   address: string,
   square: string,

@@ -9,7 +9,7 @@ export const createLand = createAsyncThunk<
   LandFormData,
   { dispatch: AppDispatch; state: RootState; extra: AxiosInstance }
 >('lands', async (_arg, { extra: api }) => {
-  const { data } = await api.post<LandFormData>(ApiRoute.Land)
+  const { data } = await api.post<LandFormData>(ApiRoute.Lands)
   return data
 })
 
@@ -21,6 +21,6 @@ export const fetchLands = createAsyncThunk<
   { dispatch: AppDispatch; state: RootState; extra: AxiosInstance }
 >('lands',
   async (_arg, { extra: api }) => {
-  const { data } = await api.get<LandFormData>(ApiRoute.Land)
+  const { data } = await api.get<LandFormData>(ApiRoute.Lands)
   return data
 })
