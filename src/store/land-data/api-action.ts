@@ -20,12 +20,10 @@ export const createLand = createAsyncThunk<LandData, LandData, {
 }>(
   'data/createLand',
   async ({registerNumber, address, areaInMeters, aboutHolder, price, whoIsFound}, {extra: api}) => {
-    const {data} = await api.post<LandData>(`${ApiRoute.Lands}/create`, {registerNumber, address, areaInMeters, aboutHolder, price, whoIsFound})
+    const {data} = await api.post<LandData>(ApiRoute.Lands, {registerNumber, address, areaInMeters, aboutHolder, price, whoIsFound})
     return data;
   },
 )
-
-console.log(createLand)
 
 // export const fetchLands = createAsyncThunk<
 //   LandFormData,
