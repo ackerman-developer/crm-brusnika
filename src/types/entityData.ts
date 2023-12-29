@@ -1,5 +1,5 @@
 export type EntityData = {
-  landId: string
+  landId: string,
   juridicalCost: number | null,
   permissiveSide: string,
   geotechnicalConditions: string,

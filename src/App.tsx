@@ -7,6 +7,7 @@ import Layout from "./components/layout/Layout";
 import ArchiveLand from "./pages/archive-land/ArchiveLand";
 import LkManager from "./pages/lk-manager/LkManager";
 import AboutLand from "./pages/about-land/AboutLand";
+import CreateEntity from "./pages/create-entity/CreateEntity";
 
 
 export default function App() {
@@ -39,6 +40,10 @@ export default function App() {
             <Route
               path={`${AppRoute.land}/:id`}
               element={<AboutLand/>}
+            />
+            <Route
+              path={`${AppRoute.createEntity}/:id`}
+              element={<CreateEntity/>}
             />
           </Route>
         </Routes>

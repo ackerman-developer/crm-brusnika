@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux-hooks";
 import { useEffect } from "react";
 import { fetchLandsByID } from "../../store/land-data/api-action";
+import { AppRoute } from "../../utils/const";
 
 export default function AboutLand(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ export default function AboutLand(): JSX.Element {
           <p>Сведения о правообладателе: {land.aboutHolder}</p>
           <p>Объявленная стоимость: {land.price}</p>
           <p>Канал поиска: {land.whoIsFound}</p>
+          <Link to={`${AppRoute.createEntity}/${land.id}`}>Перейти в объект</Link>
         </div>
       ) : (
         <p>Объект не найден</p>

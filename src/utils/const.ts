@@ -4,7 +4,8 @@ export enum AppRoute{
   createDeal = '/createDeal',
   archiveLand = '/archiveLand',
   lkManager = '/manager',
-  land = '/land'
+  land = '/land',
+  createEntity = '/entity'
 }
 
 export enum AuthStatus{
