@@ -15,4 +15,5 @@ export type LandsDataId = {
   price: number | null,
   whoIsFound: string
   id: string
+  entity: null
 }
