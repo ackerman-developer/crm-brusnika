@@ -23,7 +23,6 @@ export const landData = createSlice({
         state.isLandsDataLoading = true;
       })
       .addCase(fetchLands.fulfilled, (state, action) => {
-        console.log(action.payload)
         state.lands = action.payload
         state.isLandsDataLoading = false;
       })
