@@ -128,7 +128,7 @@ export default function CreateEntity():JSX.Element{
             type="text"
             name="transportationaAccessibility"
             placeholder='1 500 000 р'
-            value={formData.transportationaAccessibility || ''}
+            value={formData.transportationaAccessibility}
             onChange={handleChange}
           />
         </label>
