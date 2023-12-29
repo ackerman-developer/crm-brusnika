@@ -1,11 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Size=24">
-<g id="Group 93">
-<path id="Rectangle 45" d="M15 20.5V3.5H9H6H3V20.5" stroke="#14191A" stroke-width="2"/>
-<rect id="Rectangle 44" x="10" y="6.5" width="2" height="3" fill="#14191A"/>
-<rect id="Rectangle 46" x="6" y="9.5" width="2" height="3" fill="#14191A"/>
-<rect id="Rectangle 47" x="10" y="13.5" width="2" height="3" fill="#14191A"/>
-<path id="Rectangle 49" d="M18 7.5H21V20.5" stroke="#14191A" stroke-width="2"/>
+<g id="size=24">
+<g id="Union">
+<path d="M22 7H2V5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V7Z" fill="#FFFFFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 9H21V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V9ZM9 11H15V13H9V11Z" fill="#FFFFFF"/>
 </g>
 </g>
 </svg>

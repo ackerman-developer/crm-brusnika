@@ -18,6 +18,7 @@ export default function Layout(): JSX.Element{
       </div>
       <div className={styles.header}>
         <Header isOpen={isOpen} toggleSidebar={toggleSidebar}/>
+        <hr></hr>
       </div>
       <div className={`${styles.content} ${isOpen ? styles.open : ''}`}>
         <Outlet/>

@@ -27,12 +27,12 @@ export default function SideBar({ isOpen }: SideBarProps): JSX.Element{
         {!isOpen ? (
           <>
             <Link to={AppRoute.main}><img src={btnHome} alt=''/></Link>
-            <Link to={AppRoute.createDeal}><img src={btnDeal} alt=''/></Link>
+            <Link to={AppRoute.archiveLand}><img src={btnDeal} alt=''/></Link>
           </>
         ) : (
           <>
             <Link to={AppRoute.main}><img src={btnHome} alt=''/>Главная</Link>
-            <Link to={AppRoute.createDeal}><img src={btnDeal} alt=''/>Создать объект</Link>
+            <Link to={AppRoute.archiveLand}><img src={btnDeal} alt=''/>Земельные участки</Link>
           </>
         )}
       </div>

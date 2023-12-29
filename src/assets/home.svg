@@ -1,9 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Size=24">
 <g id="Group 81">
-<path id="Vector" d="M4 12V21H20V12" stroke="#14191A" stroke-width="2"/>
-<path id="Vector 6" d="M2 11L12 3L22 11" stroke="#14191A" stroke-width="2"/>
-<rect id="Rectangle 44" x="14" y="11" width="2" height="4" fill="#14191A"/>
+<path id="Vector" d="M4 12V21H20V12" stroke="#FFFFFF" stroke-width="2"/>
+<path id="Vector 6" d="M2 11L12 3L22 11" stroke="#FFFFFF" stroke-width="2"/>
+<rect id="Rectangle 44" x="14" y="11" width="2" height="4" fill="#FFFFFF"/>
 </g>
 </g>
 </svg>

@@ -1,7 +1,3 @@
-export type Admin = {
-  password: string | null
-}
-
 export type LandForm = {
   formData:{
     registerNumber: number | null,

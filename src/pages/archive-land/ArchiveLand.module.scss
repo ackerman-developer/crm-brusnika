@@ -1,0 +1,20 @@
+.header{
+  display: flex;
+  align-items: center;
+  button{
+    margin-left: auto;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #EF3B24;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  button:hover{
+    background-color: #ee432dec;
+  }
+}

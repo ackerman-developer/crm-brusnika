@@ -1,17 +1,18 @@
 .component {
+  background-color: #14191A;
   position: fixed;
   height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  color: black;
+  gap: 30px;
+  color: #FFFFFF;
   transition: width 0.3s ease;
   width: 100px;
   overflow: hidden;
   &.open {
-    width: 250px;
+    width: 280px;
   }
 }
 
@@ -19,7 +20,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   &.open {
     flex-direction: unset;
   }
@@ -52,7 +53,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    color: black;
+    color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
   }
