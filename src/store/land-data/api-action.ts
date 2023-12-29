@@ -3,7 +3,7 @@ import { AppDispatch, RootState } from "..";
 import { AxiosInstance } from "axios";
 // import { LandFormData } from "../../types/types";
 import { ApiRoute } from "../../utils/const";
-import { LandData } from "../../types/landData";
+import { LandData, LandeDataId } from "../../types/landData";
 // import { createApi } from "../../api/apiConfig";
 
 // export const createLand = createAsyncThunk<LandFormData, LandFormData,
@@ -25,14 +25,14 @@ export const createLand = createAsyncThunk<LandData, LandData, {
   },
 )
 
-export const fetchLands = createAsyncThunk<LandData, undefined, {
+export const fetchLands = createAsyncThunk<LandeDataId, undefined, {
   dispatch: AppDispatch
   state: RootState
   extra: AxiosInstance
 }>(
   'data/fetchLands',
   async (__arg, {extra: api}) => {
-    const {data} = await api.get<LandData>(ApiRoute.Lands)
+    const {data} = await api.get<LandeDataId>(ApiRoute.Lands)
     return data
   },
 )

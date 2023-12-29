@@ -1,5 +1,7 @@
-// import { RootState } from "..";
-// import { LandData } from "../../types/landData";
-// import { Namespace } from "../../utils/const";
+import { RootState } from "..";
+import { LandeDataId } from "../../types/landData";
+import { Namespace } from "../../utils/const";
 
-// export const getLands = (state: Pick<RootState, Namespace.Lands>): LandData[] => state[Namespace.Lands].lands;
+export const getLands = (state: RootState): LandeDataId[] => {
+  return state[Namespace.Lands].lands;
+}
