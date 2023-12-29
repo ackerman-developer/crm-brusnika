@@ -3,5 +3,7 @@ import { LandsDataId } from "../../types/landData";
 import { NameSpace } from "../../utils/const";
 
 export const getLands = (state: RootState): LandsDataId[] => {
-  return state[NameSpace.Lands].lands;
-}
+  const lands = state[NameSpace.Lands].lands;
+  console.log('Lands from selector:', lands);
+  return lands;
+};
