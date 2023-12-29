@@ -26,12 +26,8 @@ export const landData = createSlice({
         state.lands = action.payload
         state.isLandsDataLoading = false;
       })
-      .addCase(fetchLandsByID.pending, (state) => {
-        state.isLandsDataLoading = true;
-      })
       .addCase(fetchLandsByID.fulfilled, (state, action) => {
         state.lands = action.payload
-        state.isLandsDataLoading = false;
       })
   }
 })
