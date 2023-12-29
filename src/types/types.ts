@@ -1,3 +1,5 @@
+import { LandData } from "./landData"
+
 export type LandFormData = {
   registerNumber: number | null,
   address: string,
@@ -12,4 +14,7 @@ export interface SideBarProps{
   toggleSidebar: () => void
 }
 
+export type LandState = {
+  lands: LandData[]
+}
 
