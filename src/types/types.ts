@@ -1,4 +1,4 @@
-import { LandData, LandeDataId } from "./landData"
+import { LandData, LandsDataId } from "./landData"
 
 export type LandFormData = {
   registerNumber: number | null,
@@ -15,7 +15,7 @@ export interface SideBarProps{
 }
 
 export type LandState = {
-  lands: LandeDataId[]
+  lands: LandsDataId[]
   uploadLand: LandData[]
   isLandsDataLoading: boolean
 }

@@ -12,11 +12,11 @@ export enum AuthStatus{
   Unknown = 'UNKNOWN',
 }
 
-export const ApiRoute = {
-  Lands: '/lands',
+export enum ApiRoute{
+  Lands = '/lands',
 }
 
-export const Namespace = {
-  Lands: 'lands',
-  User: 'user'
+export enum NameSpace{
+  Lands = 'LANDS',
+  User = 'USER'
 }

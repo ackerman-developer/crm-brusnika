@@ -7,7 +7,7 @@ export type LandData = {
   whoIsFound: string
 }
 
-export type LandeDataId = {
+export type LandsDataId = {
   registerNumber: number | null,
   address: string,
   areaInMeters: string,

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createLand, fetchLands } from "./api-action";
-import { Namespace } from "../../utils/const";
+import { NameSpace } from "../../utils/const";
 import { LandState } from "../../types/types";
 
 
@@ -11,7 +11,7 @@ const initialState: LandState = {
 }
 
 export const landData = createSlice({
-  name: Namespace.Lands,
+  name: NameSpace.Lands,
   initialState,
   reducers: {},
   extraReducers(builder) {
