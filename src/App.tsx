@@ -36,9 +36,10 @@ export default function App() {
               path= {AppRoute.lkManager}
               element = {<LkManager/>}
             />
-            <Route path={AppRoute.land}>
-              <Route path=':id' element={<AboutLand/>}/>
-            </Route>
+            <Route
+              path={`${AppRoute.land}/:id`}
+              element={<AboutLand/>}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -6,6 +6,7 @@ import { LandState } from "../../types/types";
 
 const initialState: LandState = {
   lands: [],
+  landId: [],
   uploadLand: [],
   isLandsDataLoading: false
 }
@@ -27,7 +28,7 @@ export const landData = createSlice({
         state.isLandsDataLoading = false;
       })
       .addCase(fetchLandsByID.fulfilled, (state, action) => {
-        state.lands = action.payload
+        state.lands = state.lands.concat(action.payload)
       })
   }
 })
