@@ -3,7 +3,8 @@ export enum AppRoute{
   auth = '/login',
   createDeal = '/createDeal',
   archiveLand = '/archiveLand',
-  lkManager = '/manager'
+  lkManager = '/manager',
+  land = '/land'
 }
 
 export enum AuthStatus{
@@ -14,9 +15,11 @@ export enum AuthStatus{
 
 export enum ApiRoute{
   Lands = '/lands',
+  Entity = '/entities'
 }
 
 export enum NameSpace{
   Lands = 'LANDS',
-  User = 'USER'
+  User = 'USER',
+  Entity = 'ENTITY'
 }

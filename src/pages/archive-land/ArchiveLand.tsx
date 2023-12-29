@@ -9,7 +9,7 @@ export default function ArchiveLand():JSX.Element{
   return(
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Архив объектов</h1>
+        <h1>Земельные участки</h1>
         <button onClick={() => navigate(AppRoute.createDeal)}><img src={imgBtn} alt=''/> Добавить объект</button>
       </div>
       <div className={styles.content}>

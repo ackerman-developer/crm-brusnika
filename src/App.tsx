@@ -6,6 +6,7 @@ import CreateDeal from "./pages/create-deal/CreateDeal";
 import Layout from "./components/layout/Layout";
 import ArchiveLand from "./pages/archive-land/ArchiveLand";
 import LkManager from "./pages/lk-manager/LkManager";
+import AboutLand from "./pages/about-land/AboutLand";
 
 
 export default function App() {
@@ -34,6 +35,10 @@ export default function App() {
             <Route
               path= {AppRoute.lkManager}
               element = {<LkManager/>}
+            />
+            <Route
+              path= {AppRoute.land}
+              element = {<AboutLand/>}
             />
           </Route>
         </Routes>

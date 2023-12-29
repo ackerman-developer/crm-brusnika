@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
 import { fetchLands } from '../../store/land-data/api-action';
 import styles from './TableLand.module.scss'
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../utils/const';
 
 
 export default function LandTable():JSX.Element {
@@ -23,6 +25,7 @@ export default function LandTable():JSX.Element {
             <th>Сведения о правообладателе</th>
             <th>Объявленная стоимость</th>
             <th>Канал поиска</th>
+            <th>Ссылка на объект</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +37,9 @@ export default function LandTable():JSX.Element {
             <td>{land.aboutHolder}</td>
             <td>{land.price}</td>
             <td>{land.whoIsFound}</td>
+            <td>
+              <Link to={`${AppRoute.land}/${land.id}`}>Перейти в объект</Link>
+            </td>
           </tr>
         )}
         </tbody>

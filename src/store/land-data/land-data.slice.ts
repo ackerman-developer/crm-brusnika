@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createLand, fetchLands } from "./api-action";
+import { createLand, fetchLands, fetchLandsByID } from "./api-action";
 import { NameSpace } from "../../utils/const";
 import { LandState } from "../../types/types";
 
@@ -23,6 +23,13 @@ export const landData = createSlice({
         state.isLandsDataLoading = true;
       })
       .addCase(fetchLands.fulfilled, (state, action) => {
+        state.lands = action.payload
+        state.isLandsDataLoading = false;
+      })
+      .addCase(fetchLandsByID.pending, (state) => {
+        state.isLandsDataLoading = true;
+      })
+      .addCase(fetchLandsByID.fulfilled, (state, action) => {
         state.lands = action.payload
         state.isLandsDataLoading = false;
       })
