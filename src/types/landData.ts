@@ -6,3 +6,4 @@ export type LandData = {
   price: number | null,
   whoIsFound: string
 }
+

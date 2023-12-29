@@ -16,5 +16,7 @@ export interface SideBarProps{
 
 export type LandState = {
   lands: LandData[]
+  uploadLand: LandData[]
+  isLandsDataLoading: boolean
 }
 

@@ -21,7 +21,19 @@ export const createLand = createAsyncThunk<LandData, LandData, {
   'data/createLand',
   async ({registerNumber, address, areaInMeters, aboutHolder, price, whoIsFound}, {extra: api}) => {
     const {data} = await api.post<LandData>(ApiRoute.Lands, {registerNumber, address, areaInMeters, aboutHolder, price, whoIsFound})
-    return data;
+    return data
+  },
+)
+
+export const fetchLands = createAsyncThunk<LandData, undefined, {
+  dispatch: AppDispatch
+  state: RootState
+  extra: AxiosInstance
+}>(
+  'data/fetchLands',
+  async (__arg, {extra: api}) => {
+    const {data} = await api.get<LandData>(ApiRoute.Lands)
+    return data
   },
 )
 
