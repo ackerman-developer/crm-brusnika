@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createLand, fetchLands, fetchLandsByID } from "./api-action";
+import { createLand, deleteLandByID, fetchLands, fetchLandsByID } from "./api-action";
 import { NameSpace } from "../../utils/const";
 import { LandState } from "../../types/types";
 
@@ -28,7 +28,11 @@ export const landData = createSlice({
         state.isLandsDataLoading = false;
       })
       .addCase(fetchLandsByID.fulfilled, (state, action) => {
-        state.lands = state.lands.concat(action.payload)
+        state.lands = state.landId.concat(action.payload)
+      })
+      .addCase(deleteLandByID.fulfilled, (state, action) => {
+        const deletedLandId = action.meta.arg
+        state.lands = state.lands.filter(land => land.id !== deletedLandId);
       })
   }
 })

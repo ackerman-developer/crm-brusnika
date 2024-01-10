@@ -25,7 +25,7 @@ export default function LandTable():JSX.Element {
             <th>Сведения о правообладателе</th>
             <th>Объявленная стоимость</th>
             <th>Канал поиска</th>
-            <th>Ссылка на объект</th>
+            <th>Ссылка</th>
           </tr>
         </thead>
         <tbody>
@@ -33,12 +33,12 @@ export default function LandTable():JSX.Element {
           <tr key={land.id}>
             <td>{land.registerNumber}</td>
             <td>{land.address}</td>
-            <td>{land.areaInMeters}</td>
+            <td>{land.areaInMeters} м²</td>
             <td>{land.aboutHolder}</td>
-            <td>{land.price}</td>
+            <td>{land.price} рублей</td>
             <td>{land.whoIsFound}</td>
             <td>
-              <Link to={`${AppRoute.land}/${land.id}`}>Перейти в объект</Link>
+              <Link to={`${AppRoute.land}/${land.id}`}>Перейти</Link>
             </td>
           </tr>
         )}

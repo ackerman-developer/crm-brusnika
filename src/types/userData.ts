@@ -1,4 +1,4 @@
 export type UserData = {
-  login: string | null,
-  password: string | null
+  login: string,
+  password: string
 }

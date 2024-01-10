@@ -6,7 +6,7 @@ import { createEntity } from '../../store/entity-data/api-action';
 import { fetchLandsByID } from '../../store/land-data/api-action';
 import { EntityData } from '../../types/entityData';
 
-export default function CreateEntity():JSX.Element{
+export function CreateEntity():JSX.Element{
   const dispatch = useAppDispatch();
   const lands = useAppSelector((state) => state.LANDS.lands)
   const { id } = useParams<{ id?: string }>();

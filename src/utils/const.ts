@@ -1,11 +1,13 @@
 export enum AppRoute{
   main = '/',
   auth = '/login',
-  createDeal = '/createDeal',
-  archiveLand = '/archiveLand',
+  createDeal = '/land/add',
+  archiveLand = '/lands',
   lkManager = '/manager',
   land = '/land',
-  createEntity = '/entity'
+  createEntity = '/entity',
+  tasks = '/tasks',
+  editLand = '/land/edit'
 }
 
 export enum AuthStatus{

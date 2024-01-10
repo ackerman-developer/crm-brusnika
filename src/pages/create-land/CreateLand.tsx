@@ -1,7 +1,7 @@
 import CreateDealForm from '../../components/create-deal-form/CreateDealForm'
-import styles from './CreateDeal.module.scss'
+import styles from './CreateLand.module.scss'
 
-export default function CreateDeal ():JSX.Element {
+export function CreateLand ():JSX.Element {
   return(
     <div className={styles.container}>
       <CreateDealForm/>

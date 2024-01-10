@@ -1,18 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Authorization from "./pages/sing-in/Authorization";
 import { AppRoute } from "./utils/const";
-import MainScreen from "./pages/main-screen/MainScreen";
-import CreateDeal from "./pages/create-deal/CreateDeal";
+import { HelmetProvider } from "react-helmet-async";
+import {
+  AboutLand,
+  ArchiveLand,
+  Authorization,
+  CreateEntity,
+  CreateLand,
+  EditLand,
+  LkManager,
+  MainScreen,
+  TasksPage
+} from "./pages";
 import Layout from "./components/layout/Layout";
-import ArchiveLand from "./pages/archive-land/ArchiveLand";
-import LkManager from "./pages/lk-manager/LkManager";
-import AboutLand from "./pages/about-land/AboutLand";
-import CreateEntity from "./pages/create-entity/CreateEntity";
-
 
 export default function App() {
   return (
-    <>
+    <HelmetProvider>
       <BrowserRouter>
         <Routes>
           <Route
@@ -27,7 +31,7 @@ export default function App() {
             />
             <Route
               path = {AppRoute.createDeal}
-              element = {<CreateDeal/>}
+              element = {<CreateLand/>}
             />
             <Route
               path= {AppRoute.archiveLand}
@@ -38,6 +42,10 @@ export default function App() {
               element = {<LkManager/>}
             />
             <Route
+              path= {AppRoute.tasks}
+              element = {<TasksPage/>}
+            />
+            <Route
               path={`${AppRoute.land}/:id`}
               element={<AboutLand/>}
             />
@@ -45,9 +53,13 @@ export default function App() {
               path={`${AppRoute.createEntity}/:id`}
               element={<CreateEntity/>}
             />
+            <Route
+              path={`${AppRoute.editLand}/:id`}
+              element={<EditLand/>}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </HelmetProvider>
   )
 }

@@ -8,9 +8,9 @@ export function useAuth(){
 
   return{
     isAuth:
-      login !== null &&
+      login !== '' &&
       login === ADMIN_LOGIN &&
-      password !== null &&
+      password !== '' &&
       password === ADMIN_PASSWORD
   }
 }

@@ -3,6 +3,8 @@ import logo from '../../assets/logo.svg'
 import btnHome from '../../assets/home.svg'
 import btnDeal from '../../assets/deal.svg'
 import iconLogo from '../../assets/icon-logo.svg'
+import tasks from '../../assets/tasks.svg'
+// import logaut from '../../assets/logaut.svg'
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../utils/const';
 import { SideBarProps } from '../../types/types';
@@ -28,11 +30,19 @@ export default function SideBar({ isOpen }: SideBarProps): JSX.Element{
           <>
             <Link to={AppRoute.main}><img src={btnHome} alt=''/></Link>
             <Link to={AppRoute.archiveLand}><img src={btnDeal} alt=''/></Link>
+            <Link to={AppRoute.tasks}><img src={tasks} alt=''/></Link>
+            {/* <div className={styles.logaut}>
+              <Link to={AppRoute.auth}><img src={logaut} alt=''/></Link>
+            </div> */}
           </>
         ) : (
           <>
             <Link to={AppRoute.main}><img src={btnHome} alt=''/>Главная</Link>
             <Link to={AppRoute.archiveLand}><img src={btnDeal} alt=''/>Земельные участки</Link>
+            <Link to={AppRoute.tasks}><img src={tasks} alt=''/>Задачи</Link>
+            {/* <div className={styles.logaut}>
+              <Link to={AppRoute.auth}><img src={logaut} alt=''/>Выйти</Link>
+            </div> */}
           </>
         )}
       </div>

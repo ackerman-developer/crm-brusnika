@@ -3,9 +3,12 @@ import styles from './CreateDealForm.module.scss'
 import { LandFormData } from '../../types/types'
 import { createLand } from '../../store/land-data/api-action'
 import { useAppDispatch } from '../../hooks/redux-hooks'
+// import { useNavigate } from 'react-router-dom'
+// import { AppRoute } from '../../utils/const'
 
 export default function CreateDealForm():JSX.Element{
   const dispatch = useAppDispatch()
+  // const navigate = useNavigate()
   const [formData, setFormData] = useState<LandFormData>({
     registerNumber: null,
     address: '',
@@ -33,7 +36,7 @@ export default function CreateDealForm():JSX.Element{
       aboutHolder: '',
       price: null,
       whoIsFound: ''
-    });
+    })
   }
 
   return(
