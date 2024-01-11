@@ -10,6 +10,7 @@ import {
   EditLand,
   LkManager,
   MainScreen,
+  NotFoundPage,
   TasksPage
 } from "./pages";
 import Layout from "./components/layout/Layout";
@@ -23,6 +24,10 @@ export default function App() {
             path = {AppRoute.auth}
             element = {<Authorization/>}
           />
+          <Route
+              path={AppRoute.notFound}
+              element={<NotFoundPage/>}
+            />
           <Route path={AppRoute.main} element={<Layout/>}
           >
             <Route
