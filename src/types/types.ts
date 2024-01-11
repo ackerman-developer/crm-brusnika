@@ -1,4 +1,4 @@
-import { EntityData } from "./entityData"
+import { EntityData, EntityDataId } from "./entityData"
 import { LandData, LandsDataId } from "./landData"
 
 export type LandFormData = {
@@ -23,6 +23,8 @@ export type LandState = {
 }
 
 export type EntityState = {
-  entity: EntityData[]
+  uploadEnity: EntityData[]
+  entities: EntityDataId[]
+  isEntitiesDataLoading: boolean
 }
 

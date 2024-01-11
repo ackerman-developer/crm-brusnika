@@ -8,5 +8,6 @@ export * from './main-screen/MainScreen'
 export * from './sing-in/Authorization'
 export * from './tasks-page/TasksPage'
 export * from './not-found-page/NotFoundPage'
+export * from './archive-object/ArchiveObject'
 
 

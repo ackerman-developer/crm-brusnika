@@ -8,7 +8,8 @@ export enum AppRoute{
   createEntity = '/entity',
   tasks = '/tasks',
   editLand = '/land/edit',
-  notFound = '*'
+  notFound = '*',
+  archiveObject = '/objects'
 }
 
 export enum AuthStatus{

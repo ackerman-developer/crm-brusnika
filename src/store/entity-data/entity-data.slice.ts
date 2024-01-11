@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { NameSpace } from "../../utils/const";
 import { EntityState } from "../../types/types";
-import { createEntity } from "./api-action";
+import { createEntity, fetchEntities } from "./api-action";
 
 
 const initialState: EntityState = {
-  entity: []
+  uploadEnity: [],
+  entities: [],
+  isEntitiesDataLoading: false
 }
 
 export const entityData = createSlice({
@@ -15,7 +17,14 @@ export const entityData = createSlice({
   extraReducers(builder) {
     builder
       .addCase(createEntity.fulfilled, (state, action) => {
-        state.entity.push(action.payload)
+        state.uploadEnity.push(action.payload)
+      })
+      .addCase(fetchEntities.pending, (state) => {
+        state.isEntitiesDataLoading = true
+      })
+      .addCase(fetchEntities.fulfilled, (state, action) => {
+        state.entities = action.payload
+        state.isEntitiesDataLoading = false
       })
   }
 })

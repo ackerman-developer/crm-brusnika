@@ -11,7 +11,8 @@ import {
   LkManager,
   MainScreen,
   NotFoundPage,
-  TasksPage
+  TasksPage,
+  ArchiveObject
 } from "./pages";
 import Layout from "./components/layout/Layout";
 
@@ -61,6 +62,10 @@ export default function App() {
             <Route
               path={`${AppRoute.editLand}/:id`}
               element={<EditLand/>}
+            />
+            <Route
+              path={AppRoute.archiveObject}
+              element={<ArchiveObject/>}
             />
           </Route>
         </Routes>

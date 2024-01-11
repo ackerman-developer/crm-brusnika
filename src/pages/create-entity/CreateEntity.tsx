@@ -9,9 +9,10 @@ import { EntityData } from '../../types/entityData';
 export function CreateEntity():JSX.Element{
   const dispatch = useAppDispatch();
   const lands = useAppSelector((state) => state.LANDS.lands)
-  const { id } = useParams<{ id?: string }>();
+  const { id } = useParams<{ id?: string }>()
+  const land = lands.find((landItem) => landItem.id === id)
   const [formData, setFormData] = useState<EntityData>({
-    landId: '',
+    landId: land?.id,
     juridicalCost: null,
     permissiveSide: '',
     geotechnicalConditions: '',
@@ -46,8 +47,6 @@ export function CreateEntity():JSX.Element{
     }
   }, [dispatch, id])
 
-  const land = lands.find((landItem) => landItem.id === id);
-
   return(
     <form className={styles.container} onSubmit={handleSubmit}>
       <div className={styles.title}>
@@ -61,16 +60,6 @@ export function CreateEntity():JSX.Element{
           <p>Сведения о правообладателе: {land.aboutHolder}</p>
           <p>Объявленная стоимость: {land.price}</p>
           <p>Канал поиска: {land.whoIsFound}</p>
-          <label>
-            Id земельного участка:
-            <input
-              type="text"
-              name="landId"
-              placeholder='189093750'
-              value={land.id}
-              onChange={handleChange}
-            />
-          </label>
         </div>
       )}
       <div className={styles.inputData}>

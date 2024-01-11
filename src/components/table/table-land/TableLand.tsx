@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-import { fetchLands } from '../../store/land-data/api-action';
-import styles from './TableLand.module.scss'
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux-hooks';
+import { fetchLands } from '../../../store/land-data/api-action';
+import styles from '../Table.module.scss'
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../../utils/const';
+import { AppRoute } from '../../../utils/const';
 
 
 export default function LandTable():JSX.Element {

@@ -2,7 +2,7 @@ import { AppRoute } from '../../utils/const'
 import { useNavigate } from 'react-router-dom'
 import styles from './ArchiveLand.module.scss'
 import imgBtn from '../../assets/createBtn.svg'
-import LandTable from '../../components/table/TableLand'
+import LandTable from '../../components/table/table-land/TableLand'
 
 export function ArchiveLand():JSX.Element{
   const navigate = useNavigate()
